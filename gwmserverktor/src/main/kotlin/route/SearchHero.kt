@@ -13,7 +13,6 @@ fun Route.searchHeroes() {
 
     get("/gwm/heroes/search") {
         val name = call.request.queryParameters["name"]
-
         val apiResponse = heroRepository.searchHeroes(name = name)
         call.respond(
             message = apiResponse,
