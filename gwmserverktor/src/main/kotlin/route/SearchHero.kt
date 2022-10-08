@@ -11,7 +11,7 @@ fun Route.searchHeroes() {
 
     val heroRepository : HeroRepository by inject()
 
-    get("/boruto/heroes/search") {
+    get("/gwm/heroes/search") {
         val name = call.request.queryParameters["name"]
 
         val apiResponse = heroRepository.searchHeroes(name = name)
