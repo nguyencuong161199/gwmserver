@@ -7,17 +7,17 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import org.koin.ktor.ext.inject
 
-//fun Route.searchHeroes() {
-//
-//    val heroRepository : HeroRepository by inject()
-//
-//    get("/boruto/heroes/search") {
-//        val name = call.request.queryParameters["name"]
-//
-//        val apiResponse = heroRepository.searchHeroes(name = name)
-//        call.respond(
-//            message = apiResponse,
-//            status = HttpStatusCode.OK
-//        )
-//    }
-//}
+fun Route.searchHeroes() {
+
+    val heroRepository : HeroRepository by inject()
+
+    get("/boruto/heroes/search") {
+        val name = call.request.queryParameters["name"]
+
+        val apiResponse = heroRepository.searchHeroes(name = name)
+        call.respond(
+            message = apiResponse,
+            status = HttpStatusCode.OK
+        )
+    }
+}
